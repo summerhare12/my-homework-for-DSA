@@ -23,6 +23,6 @@ $(PDF): $(TEX)
 
 # 清理生成的文件
 clean:
-	rm -f $(EXEC) $(PDF) *.aux *.log *.out *.o
+	rm -f $(EXEC) *.aux *.log 
 
 .PHONY: all run report clean
