@@ -1,0 +1,28 @@
+SRC = test.cpp
+EXEC = test
+
+# LaTeX 文件
+TEX = report.tex
+PDF = report.pdf
+
+# 默认目标
+all: run report
+
+# 编译并运行程序
+run: $(EXEC)
+	./$(EXEC)
+
+$(EXEC): $(SRC)
+	g++ -O2 -o $(EXEC) $(SRC)
+
+# 生成 PDF 报告
+report: $(PDF)
+
+$(PDF): $(TEX)
+	xelatex $(TEX)
+
+# 清理生成的文件
+clean:
+	rm -f $(EXEC) $(PDF) *.aux *.log *.out *.o
+
+.PHONY: all run report clean
