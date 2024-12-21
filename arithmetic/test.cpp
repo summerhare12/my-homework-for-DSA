@@ -73,7 +73,7 @@ int main(){
     cout<< "expression:"<< p << endl;
     a3.calculation(p);
 
-    string q = "1.5*3+2+300/";
+    string q = "1.5*3+2+300/";//表达式以运算符结尾
     cout<< "expression:"<< q << endl;
     a3.calculation(q);  
 }
